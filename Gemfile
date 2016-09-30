@@ -2,3 +2,7 @@
 source "https://rubygems.org"
 
 gem "roda", "~> 2.18.0"
+
+group :test do
+  gem "rspec"
+end
