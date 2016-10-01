@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>League of Legends Champions</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%== assets(:css) %>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-lol-theme" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand navbar-lol-brand">League of Legends - Champions</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" id="content">
+      <%== yield %>
+    </div>
+  </body>
+</html>
