@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    multi_xml (0.5.5)
     rack (2.0.1)
     roda (2.18.0)
       rack
@@ -23,6 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  httparty
   roda (~> 2.18.0)
   rspec
 
