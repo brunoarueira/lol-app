@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe LeagueOfLegends::GameVersion do
+describe LeagueOfLegends::GameVersion, vcr: { cassette_name: "league_of_legends/game_version" } do
   describe '.all' do
     it 'returns all the game versions' do
       version = described_class.new(number: "6.20.1")

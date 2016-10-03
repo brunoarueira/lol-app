@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Champions' do
+describe 'Champions', vcr: { cassette_name: "league_of_legends/champions" } do
   include Capybara::DSL
 
   it 'list all the champions when visit the index' do

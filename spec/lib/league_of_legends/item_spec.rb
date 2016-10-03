@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe LeagueOfLegends::Item do
+describe LeagueOfLegends::Item, vcr: { cassette_name: "league_of_legends/item" } do
   describe '.find' do
     it 'returns the item by id' do
       item1 = described_class.new(id: 1054,

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe LeagueOfLegends::Champion do
+describe LeagueOfLegends::Champion, vcr: { cassette_name: "league_of_legends/champion" } do
   describe '.all' do
     it 'returns all the champions' do
       champion1 = described_class.new(id: 89,
