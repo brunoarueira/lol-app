@@ -1,4 +1,9 @@
+ENV['RACK_ENV'] = 'test'
+
+require_relative '../lol'
+
 require "support/league_of_legends"
+require "support/capybara"
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

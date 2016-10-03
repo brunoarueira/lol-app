@@ -1,4 +1,12 @@
+require 'rubygems'
 require 'roda'
+
+require ::File.expand_path('../lib/league_of_legends',  __FILE__)
+
+LeagueOfLegends.config do |config|
+  config.api_key = ENV['LOL_API_KEY']
+  config.region = "euw"
+end
 
 module Lol
   class App < Roda
@@ -37,7 +45,21 @@ module Lol
       r.assets
 
       r.root do
+        @champions = LeagueOfLegends::Champion.all
+
         view 'index'
+      end
+
+      r.is 'search' do
+        query = request['q']
+
+        if query && query.empty?
+          view content: "<h3>You must need to type in a text to search"
+        else
+          @champions = LeagueOfLegends::Champion.search_by(query)
+
+          view 'index'
+        end
       end
     end
   end

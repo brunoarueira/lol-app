@@ -13,6 +13,7 @@ GEM
       capybara (>= 2.3.0, < 2.8.0)
       json
     diff-lcs (1.2.5)
+    erubis (2.7.0)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     json (2.0.2)
@@ -44,6 +45,7 @@ GEM
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
     sass (3.4.22)
+    tilt (2.0.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -53,10 +55,12 @@ PLATFORMS
 DEPENDENCIES
   capybara (= 2.7.0)
   capybara-webkit (= 1.11.0)
+  erubis
   httparty
   roda (~> 2.18.0)
   rspec
   sass
+  tilt
 
 BUNDLED WITH
    1.13.0.rc.1

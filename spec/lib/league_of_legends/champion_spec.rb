@@ -19,6 +19,22 @@ describe LeagueOfLegends::Champion do
     end
   end
 
+  describe '.search_by' do
+    it 'returns the champions queried by a value' do
+      champion1 = described_class.new(id: 89,
+                                      title: "the Radiant Dawn",
+                                      name: "Leona",
+                                      key: "Leona",
+                                      info: { "attack" => 4, "defense" => 8, "magic" => 3, "difficulty" => 4 })
+
+      champions = described_class.search_by("Leon")
+
+      expect(champions.count).to eq 1
+
+      expect(champions).to include champion1
+    end
+  end
+
   describe '#initialize' do
     it 'sets the attributes passed as arguments' do
       attributes = { id: 79, title: "the Rabble Rouser", name: "Gragas", key: "Gragas", info: { "attack" => 4, "defense" => 7, "magic" => 6, "difficulty" => 5 } }
@@ -30,6 +46,18 @@ describe LeagueOfLegends::Champion do
       expect(champion.name).to eq "Gragas"
       expect(champion.key).to eq "Gragas"
       expect(champion.info).to eq "attack" => 4, "defense" => 7, "magic" => 6, "difficulty" => 5
+    end
+  end
+
+  describe '#image' do
+    it 'returns the image of the champion' do
+      champion = described_class.new(id: 89,
+                                     title: "the Radiant Dawn",
+                                     name: "Leona",
+                                     key: "Leona",
+                                     info: { "attack" => 4, "defense" => 8, "magic" => 3, "difficulty" => 4 })
+
+      expect(champion.image).to eq "http://ddragon.leagueoflegends.com/cdn/6.20.1/img/champion/Leona.png"
     end
   end
 

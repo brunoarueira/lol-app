@@ -1,0 +1,19 @@
+<div class="row">
+  <% @champions.each do |champion| %>
+    <div class="col-sm-4 champion">
+      <div class="champion-card">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object img-circle profile-img" src="<%== champion.image %>">
+          </div>
+
+          <div class="media-body media-middle">
+            <h3 class="media-heading"><%== champion.name %></h3>
+
+            <h4><%== champion.title %></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

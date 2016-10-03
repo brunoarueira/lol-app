@@ -3,7 +3,7 @@ module LeagueOfLegends
     RESOURCE = "champion"
     API_VERSION = "v1.2"
 
-    attr_accessor :id, :info, :key, :name, :title
+    attr_accessor :id, :info, :key, :lore, :name, :title
 
     def initialize(params = {})
       self.info = params.delete(:info)
@@ -11,6 +11,10 @@ module LeagueOfLegends
       params.each do |key, value|
         send("#{key}=", value)
       end
+    end
+
+    def image
+      "http://ddragon.leagueoflegends.com/cdn/#{last_game_version}/img/champion/#{self.key}.png"
     end
 
     def ==(object)
@@ -30,11 +34,22 @@ module LeagueOfLegends
                                 title: raw_champion["title"],
                                 name: raw_champion["name"],
                                 key: raw_champion["key"],
+                                lore: raw_champion["lore"],
                                 info: raw_champion["info"])
         end
 
         champions
       end
+
+      def search_by(query)
+        all.select { |champion| champion.name.downcase =~ /#{query.downcase}/ }
+      end
+    end
+
+    private
+
+    def last_game_version
+      GameVersion.last
     end
   end
 end
