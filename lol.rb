@@ -61,6 +61,16 @@ module Lol
           view 'index'
         end
       end
+
+      r.is 'champion/:id' do |id|
+        @champion = LeagueOfLegends::Champion.find(id)
+
+        if @champion
+          view 'champion'
+        else
+          nil
+        end
+      end
     end
   end
 end

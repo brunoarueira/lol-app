@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm-12 champion-panel">
+    <div class="media">
+      <div class="media-left">
+        <img class="media-object img-circle profile-img" src="<%== @champion.image %>">
+      </div>
+
+      <div class="media-body media-middle">
+        <h3 class="media-heading"><%== @champion.name %></h3>
+
+        <h4><%== @champion.title %></h4>
+      </div>
+    </div>
+
+    <%== @champion.lore %>
+
+    <h5>Recommended items</h5>
+
+    <% if @champion.recommended_items %>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @champion.recommended_items.each do |recommended_item| %>
+            <tr>
+              <td><%== recommended_item.name %></td>
+              <td><%== recommended_item.description %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>

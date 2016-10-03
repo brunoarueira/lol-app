@@ -3,7 +3,35 @@ module LeagueOfLegends
     RESOURCE = "champion"
     API_VERSION = "v1.2"
 
-    attr_accessor :id, :info, :key, :lore, :name, :title
+    class << self
+      def all(champData = "all")
+        response = Request.get(RESOURCE, API_VERSION, { champData: champData, dataById: true })
+        data = response["data"]
+        champions = []
+
+        data.values.each do |raw_champion|
+          champions << self.new(id: raw_champion["id"],
+                                title: raw_champion["title"],
+                                name: raw_champion["name"],
+                                key: raw_champion["key"],
+                                lore: raw_champion["lore"],
+                                info: raw_champion["info"],
+                                recommended: raw_champion["recommended"])
+        end
+
+        champions
+      end
+
+      def search_by(query)
+        all.select { |champion| champion.name.downcase =~ /#{query.downcase}/ }
+      end
+
+      def find(id)
+        all.select { |champion| champion.id.to_i == id.to_i }.first
+      end
+    end
+
+    attr_accessor :id, :info, :key, :lore, :name, :recommended, :title
 
     def initialize(params = {})
       self.info = params.delete(:info)
@@ -17,39 +45,35 @@ module LeagueOfLegends
       "http://ddragon.leagueoflegends.com/cdn/#{last_game_version}/img/champion/#{self.key}.png"
     end
 
+    def recommended_items
+      build_recommended_items(recommended)
+    end
+
     def ==(object)
       return false unless object.kind_of?(Champion)
 
       self.id == object.id && self.key == object.key
     end
 
-    class << self
-      def all(champData = "all")
-        response = Request.get(RESOURCE, API_VERSION, { champData: champData, dataById: true })
-        data = response["data"]
-        champions = []
-
-        data.values.each do |raw_champion|
-          champions << self.new(id: raw_champion["id"],
-                                title: raw_champion["title"],
-                                name: raw_champion["name"],
-                                key: raw_champion["key"],
-                                lore: raw_champion["lore"],
-                                info: raw_champion["info"])
-        end
-
-        champions
-      end
-
-      def search_by(query)
-        all.select { |champion| champion.name.downcase =~ /#{query.downcase}/ }
-      end
-    end
-
     private
 
     def last_game_version
       GameVersion.last
+    end
+
+    def build_recommended_items(recommended)
+      recommended_items = []
+
+      recommended.each do |raw_recommended|
+        items = raw_recommended["blocks"].map { |h| h["items"] }.flatten
+        item_ids = items.map { |h| h["id"] }.uniq
+
+        item_ids.each do |item_id|
+          recommended_items << Item.find(item_id)
+        end
+      end
+
+      recommended_items
     end
   end
 end

@@ -33,6 +33,18 @@ describe LeagueOfLegends::Champion do
 
       expect(champions).to include champion1
     end
+
+    describe '.find' do
+      it 'returns the champion by id' do
+        champion1 = described_class.new(id: 89,
+                                        title: "the Radiant Dawn",
+                                        name: "Leona",
+                                        key: "Leona",
+                                        info: { "attack" => 4, "defense" => 8, "magic" => 3, "difficulty" => 4 })
+
+        expect(described_class.find(89)).to eq champion1
+      end
+    end
   end
 
   describe '#initialize' do
@@ -58,6 +70,18 @@ describe LeagueOfLegends::Champion do
                                      info: { "attack" => 4, "defense" => 8, "magic" => 3, "difficulty" => 4 })
 
       expect(champion.image).to eq "http://ddragon.leagueoflegends.com/cdn/6.20.1/img/champion/Leona.png"
+    end
+  end
+
+  describe '#recommended_items' do
+    it 'returns the recommended items of the champion' do
+      item = LeagueOfLegends::Item.new(id: 1054,
+                                       name: "Doran's Shield",
+                                       description: "+80 Health Passive: Restores 6 Health every 5 seconds. UNIQUE Passive: Blocks 8 damage from single target attacks and spells from champions.")
+
+      champion = described_class.all.first
+
+      expect(champion.recommended_items).to include item
     end
   end
 

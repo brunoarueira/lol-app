@@ -2,6 +2,7 @@ require_relative 'league_of_legends/invalid_api_response'
 require_relative 'league_of_legends/request'
 require_relative 'league_of_legends/champion'
 require_relative 'league_of_legends/game_version'
+require_relative 'league_of_legends/item'
 
 module LeagueOfLegends
   API_URL = "https://global.api.pvp.net/api/lol/static-data"

@@ -35,4 +35,25 @@ describe 'Champions' do
       expect(page).to have_content 'the Radiant Dawn'
     end
   end
+
+  it 'show champion info page with recommended items' do
+    visit '/'
+
+    click_link 'Leona'
+
+    expect(page).to have_content 'Leona'
+    expect(page).to have_content 'the Radiant Dawn'
+    expect(page).to have_content 'If you would shine like a sun, first you must burn like one.'
+
+    within 'table' do
+      within 'tbody' do
+        expect(page).to have_css 'tr', count: 105
+
+        within 'tr:nth-child(3)' do
+          expect(page).to have_content 'Ruby Crystal'
+          expect(page).to have_content '+150 Health'
+        end
+      end
+    end
+  end
 end
