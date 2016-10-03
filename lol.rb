@@ -2,10 +2,12 @@ require 'rubygems'
 require 'roda'
 
 require ::File.expand_path('../lib/league_of_legends',  __FILE__)
+require ::File.expand_path('../lib/env', __FILE__)
 
 LeagueOfLegends.config do |config|
   config.api_key = ENV['LOL_API_KEY']
   config.region = "euw"
+  config.redis_url = ENV['REDIS_PROVIDER'] || 'redis://localhost:6379/'
 end
 
 module Lol

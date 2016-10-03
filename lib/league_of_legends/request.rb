@@ -1,4 +1,5 @@
 require 'httparty'
+require 'redis'
 
 module LeagueOfLegends
   class NotFound < StandardError; end
@@ -8,6 +9,11 @@ module LeagueOfLegends
     class << self
       def get(resource, api_version, additional_params = {})
         api_url = api_url(resource, api_version)
+        store_key = store_key(resource, api_version)
+
+        if result = store.get(store_key)
+          return JSON.parse(result)
+        end
 
         response = HTTParty.get(api_url, { query: additional_params })
 
@@ -17,13 +23,25 @@ module LeagueOfLegends
           raise InvalidAPIResponse.new(api_url, response)
         end
 
-        response.parsed_response
+        response = response.parsed_response
+
+        store.setex store_key, 900, response.to_json
+
+        response
       end
 
       private
 
       def api_url(resource, api_version)
         LeagueOfLegends.generate_url_to_call(resource, api_version)
+      end
+
+      def store_key(resource, api_version)
+        "#{resource}/#{api_version}"
+      end
+
+      def store
+        ::Redis.new(url: LeagueOfLegends.redis_url)
       end
     end
   end

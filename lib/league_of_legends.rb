@@ -8,7 +8,7 @@ module LeagueOfLegends
   API_URL = "https://global.api.pvp.net/api/lol/static-data"
 
   class << self
-    attr_accessor :api_key, :region
+    attr_accessor :api_key, :region, :redis_url
 
     def generate_url_to_call(resource, api_version)
       "#{API_URL}/#{self.region}/#{api_version}/#{resource}?api_key=#{self.api_key}"
@@ -17,6 +17,7 @@ module LeagueOfLegends
 
   self.api_key = nil
   self.region = nil
+  self.redis_url = nil
 
   def self.config
     yield self
