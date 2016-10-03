@@ -6,5 +6,7 @@ gem "httparty"
 gem "sass"
 
 group :test do
+  gem "capybara", "2.7.0"
+  gem "capybara-webkit", "1.11.0"
   gem "rspec"
 end
