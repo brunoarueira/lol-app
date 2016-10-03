@@ -6,6 +6,7 @@ gem "httparty"
 gem "sass"
 gem "tilt"
 gem "erubis"
+gem "rack-unreloader"
 
 group :test do
   gem "capybara", "2.7.0"
