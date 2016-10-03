@@ -8,6 +8,7 @@ gem "tilt"
 gem "erubis"
 gem "rack-unreloader"
 gem "redis"
+gem "puma"
 
 group :test do
   gem "capybara", "2.7.0"
