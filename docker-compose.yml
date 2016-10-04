@@ -1,0 +1,14 @@
+web:
+  build: .
+  volumes:
+    - .:/app
+  ports:
+    - "9990:9292"
+  links:
+    - redis
+  environment:
+    REDIS_PROVIDER: 'redis'
+redis:
+  image: redis:alpine
+  ports:
+    - "9999:6379"
