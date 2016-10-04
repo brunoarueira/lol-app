@@ -19,5 +19,8 @@ COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN bundle install
 
+# Precompile Rails assets
+RUN bundle exec rake assets:precompile
+
 COPY . /app
 CMD ["puma", "-e", "production"]
