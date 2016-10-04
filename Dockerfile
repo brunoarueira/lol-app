@@ -17,10 +17,11 @@ WORKDIR /app
 
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
-RUN bundle install --without development test
+RUN bundle install --jobs 20 --retry 5 --without development test
+
+ADD ./ /app
 
 # Precompile Rails assets
-RUN bundle exec rake assets:precompile
+RUN bundle exec rake RAILS_ENV=production assets:precompile
 
-COPY . /app
 CMD ["puma", "-e", "production"]
