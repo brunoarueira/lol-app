@@ -17,7 +17,7 @@ WORKDIR /app
 
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
-RUN bundle install
+RUN bundle install --without development test
 
 # Precompile Rails assets
 RUN bundle exec rake assets:precompile
