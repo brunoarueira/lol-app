@@ -13,6 +13,10 @@ module LeagueOfLegends
     def generate_url_to_call(resource, api_version)
       "#{API_URL}/#{self.region}/#{api_version}/#{resource}?api_key=#{self.api_key}"
     end
+
+    def store
+      ::Redis.new(url: LeagueOfLegends.redis_url)
+    end
   end
 
   self.api_key = nil

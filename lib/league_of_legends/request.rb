@@ -41,7 +41,7 @@ module LeagueOfLegends
       end
 
       def store
-        ::Redis.new(url: LeagueOfLegends.redis_url)
+        LeagueOfLegends.store
       end
     end
   end
