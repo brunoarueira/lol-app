@@ -1,8 +1,6 @@
 require 'rubygems'
 require 'roda'
 
-require ::File.expand_path('../lib/league_of_legends',  __FILE__)
-
 module Lol
   class App < Roda
     opts[:root] = File.dirname(__FILE__)
