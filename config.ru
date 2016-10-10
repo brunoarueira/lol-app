@@ -1,5 +1,9 @@
 require './lib/env'
 require './lib/league_of_legends'
+require 'dotenv'
+
+Dotenv.load
+
 require './config/unreloader'
 require './config/league_of_legends'
 

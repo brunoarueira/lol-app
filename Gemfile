@@ -11,6 +11,10 @@ gem "rack-unreloader"
 gem "redis"
 gem "puma"
 
+group :development, :test do
+  gem 'dotenv'
+end
+
 group :test do
   gem "capybara", "2.7.0"
   gem "capybara-webkit", "1.11.0"
