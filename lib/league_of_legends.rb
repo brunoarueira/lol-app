@@ -8,10 +8,10 @@ module LeagueOfLegends
   API_URL = "https://global.api.pvp.net/api/lol/static-data"
 
   class << self
-    attr_accessor :api_key, :region, :redis_url
+    attr_accessor :api_key, :api_version, :redis_url, :region
 
-    def generate_url_to_call(resource, api_version)
-      "#{API_URL}/#{self.region}/#{api_version}/#{resource}?api_key=#{self.api_key}"
+    def generate_url_to_call(resource)
+      "#{API_URL}/#{self.region}/#{self.api_version}/#{resource}?api_key=#{self.api_key}"
     end
 
     def store
@@ -20,8 +20,9 @@ module LeagueOfLegends
   end
 
   self.api_key = nil
-  self.region = nil
+  self.api_version = nil
   self.redis_url = nil
+  self.region = nil
 
   def self.config
     yield self

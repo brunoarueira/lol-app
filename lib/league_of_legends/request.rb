@@ -7,9 +7,9 @@ module LeagueOfLegends
 
   class Request
     class << self
-      def get(resource, api_version, additional_params = {})
-        api_url = api_url(resource, api_version)
-        store_key = store_key(resource, api_version)
+      def get(resource, additional_params = {})
+        api_url = api_url(resource)
+        store_key = store_key(resource)
 
         if result = store.get(store_key)
           return JSON.parse(result)
@@ -32,12 +32,16 @@ module LeagueOfLegends
 
       private
 
-      def api_url(resource, api_version)
-        LeagueOfLegends.generate_url_to_call(resource, api_version)
+      def api_url(resource)
+        LeagueOfLegends.generate_url_to_call(resource)
       end
 
-      def store_key(resource, api_version)
+      def store_key(resource)
         "#{resource}/#{api_version}"
+      end
+
+      def api_version
+        LeagueOfLegends.api_version
       end
 
       def store

@@ -1,11 +1,10 @@
 module LeagueOfLegends
   class Champion
     RESOURCE = "champion"
-    API_VERSION = "v1.2"
 
     class << self
       def all(champData = "all")
-        response = Request.get(RESOURCE, API_VERSION, { champData: champData, dataById: true })
+        response = Request.get(RESOURCE, { champData: champData, dataById: true })
         data = response["data"]
         champions = []
 

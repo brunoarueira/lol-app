@@ -1,7 +1,6 @@
 module LeagueOfLegends
   class GameVersion
     RESOURCE = "versions"
-    API_VERSION = "v1.2"
 
     attr_accessor :number
 
@@ -21,7 +20,7 @@ module LeagueOfLegends
 
     class << self
       def all
-        response = Request.get(RESOURCE, API_VERSION)
+        response = Request.get(RESOURCE)
         game_versions = []
 
         response.each do |raw_game_version|

@@ -1,11 +1,10 @@
 module LeagueOfLegends
   class Item
     RESOURCE = "item"
-    API_VERSION = "v1.2"
 
     class << self
       def all(itemData: "all")
-        response = Request.get(RESOURCE, API_VERSION, { itemListData: itemData, dataById: true })
+        response = Request.get(RESOURCE, { itemListData: itemData, dataById: true })
         data = response["data"]
         items = []
 

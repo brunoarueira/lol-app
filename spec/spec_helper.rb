@@ -1,8 +1,12 @@
 ENV['RACK_ENV'] = 'test'
 
+require "support/dotenv"
+
+require File.expand_path("../../lib/league_of_legends", __FILE__)
+require File.expand_path("../../config/league_of_legends", __FILE__)
+
 require_relative '../lol'
 
-require "support/league_of_legends"
 require "support/capybara"
 require "support/vcr"
 
