@@ -4,14 +4,16 @@ module LeagueOfLegends
 
     class << self
       def all(itemData: "all")
-        response = Request.get(RESOURCE, { itemListData: itemData, dataById: true })
-        data = response["data"]
+        response = Request.get_by_resource(RESOURCE, { itemListData: itemData, dataById: true })
         items = []
 
-        data.values.each do |raw_item|
-          items << self.new(id: raw_item["id"],
-                            description: raw_item["sanitizedDescription"],
-                            name: raw_item["name"])
+        if response
+          data = response["data"]
+          data.values.each do |raw_item|
+            items << self.new(id: raw_item["id"],
+                              description: raw_item["sanitizedDescription"],
+                              name: raw_item["name"])
+          end
         end
 
         items

@@ -8,7 +8,7 @@ describe 'Champions', vcr: { cassette_name: "league_of_legends/champions" } do
 
     expect(page).to have_content 'League of Legends - Champions'
 
-    expect(page).to have_css '.champion', count: 132
+    expect(page).to have_css '.champion', count: 133
 
     expect(page).to have_content 'Varus'
 

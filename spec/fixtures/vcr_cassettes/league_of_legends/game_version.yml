@@ -27,139 +27,48 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Mon, 03 Oct 2016 22:54:30 GMT
+      - Sun, 06 Nov 2016 18:52:12 GMT
       Vary:
       - Accept-Encoding, User-Agent
       X-Newrelic-App-Data:
-      - PxQFWFFSDwQTVlhTBAcHX0YdFGQHBDcQUQxLA1tMXV1dORYzVBBGBxdCdhUSEVFRRRAEPhhQRw84HlpcDjpMEUQDTAtbFVBTRwRlTlQURD5LQAZPVD8XRVUWEgtYX0RESAEYA05WTVIAUQlbDQEECh9ICE0TAwNVXAMBAwJUXVYFB1hQDxMbAAVdRVY/
-      Content-Length:
-      - '344'
+      - PxQFWFFSDwQTVlhTBAcHX0YdFGQHBDcQUQxLA1tMXV1dORYzVBBGBxdCdhUSEVFRRRAEPhhQRw84HlpcDjpMEUQDTAtbFVBTRwRlTlQURD5LQAZPVD8XRVUWEgtYX0RESAEYA05WTVIAUQhSDw8FBR9ICE0TBAoEAg4OUANVCAoBB1RQAhMbAAVdRVY/
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       base64_string: |
-        WyI2LjIwLjEiLCI2LjE5LjEiLCI2LjE4LjEiLCI2LjE3LjEiLCI2LjE2LjIi
-        LCI2LjE2LjEiLCI2LjE1LjEiLCI2LjE0LjIiLCI2LjE0LjEiLCI2LjEzLjEi
-        LCI2LjEyLjEiLCI2LjExLjEiLCI2LjEwLjEiLCI2LjkuMSIsIjYuOC4xIiwi
-        Ni43LjEiLCI2LjYuMSIsIjYuNS4xIiwiNi40LjIiLCI2LjQuMSIsIjYuMy4x
-        IiwiNi4yLjEiLCI2LjEuMSIsIjUuMjQuMiIsIjUuMjQuMSIsIjUuMjMuMSIs
-        IjUuMjIuMyIsIjUuMjIuMiIsIjUuMjIuMSIsIjUuMjEuMSIsIjUuMjAuMSIs
-        IjUuMTkuMSIsIjUuMTguMSIsIjUuMTcuMSIsIjUuMTYuMSIsIjUuMTUuMSIs
-        IjUuMTQuMSIsIjUuMTMuMSIsIjUuMTIuMSIsIjUuMTEuMSIsIjUuMTAuMSIs
-        IjUuOS4xIiwiNS44LjEiLCI1LjcuMiIsIjUuNy4xIiwiNS42LjIiLCI1LjYu
-        MSIsIjUuNS4zIiwiNS41LjIiLCI1LjUuMSIsIjUuNC4xIiwiNS4zLjEiLCI1
-        LjIuMiIsIjUuMi4xIiwiNS4xLjIiLCI1LjEuMSIsIjQuMjEuNSIsIjQuMjEu
-        NCIsIjQuMjEuMyIsIjQuMjEuMSIsIjQuMjAuMiIsIjQuMjAuMSIsIjQuMTku
-        MyIsIjQuMTkuMiIsIjQuMTguMSIsIjQuMTcuMSIsIjQuMTYuMSIsIjQuMTUu
-        MSIsIjQuMTQuMiIsIjQuMTMuMSIsIjQuMTIuMiIsIjQuMTIuMSIsIjQuMTEu
-        MyIsIjQuMTAuNyIsIjQuMTAuMiIsIjQuOS4xIiwiNC44LjMiLCI0LjguMiIs
-        IjQuOC4xIiwiNC43LjE2IiwiNC43LjkiLCI0LjcuOCIsIjQuNi4zIiwiNC41
-        LjQiLCI0LjQuMyIsIjQuNC4yIiwiNC4zLjE4IiwiNC4zLjEyIiwiNC4zLjEw
-        IiwiNC4zLjQiLCI0LjMuMiIsIjQuMi42IiwiNC4yLjUiLCI0LjIuMSIsIjQu
-        MS40MyIsIjQuMS40MSIsIjQuMS4xMyIsIjQuMS45IiwiNC4xLjIiLCIzLjE1
-        LjUiLCIzLjE1LjQiLCIzLjE1LjIiLCIzLjE0LjQxIiwiMy4xNC4yMyIsIjMu
-        MTQuMjIiLCIzLjE0LjIwIiwiMy4xNC4xOSIsIjMuMTQuMTYiLCIzLjE0LjEz
-        IiwiMy4xNC4xMiIsIjMuMTMuMjQiLCIzLjEzLjgiLCIzLjEzLjYiLCIzLjEz
-        LjEiLCIzLjEyLjM3IiwiMy4xMi4zNiIsIjMuMTIuMzQiLCIzLjEyLjMzIiwi
-        My4xMi4yNiIsIjMuMTIuMjQiLCIzLjEyLjIiLCIzLjExLjQiLCIzLjExLjIi
-        LCIzLjEwLjYiLCIzLjEwLjMiLCIzLjEwLjIiLCIzLjkuNyIsIjMuOS41Iiwi
-        My45LjQiLCIzLjguNSIsIjMuOC4zIiwiMy44LjEiLCIzLjcuOSIsIjMuNy4y
-        IiwiMy43LjEiLCIzLjYuMTUiLCIzLjYuMTQiLCIwLjE1NC4zIiwiMC4xNTQu
-        MiIsIjAuMTUzLjIiLCIwLjE1Mi4xMTUiLCIwLjE1Mi4xMDgiLCIwLjE1Mi4x
-        MDciLCIwLjE1Mi41NSIsIjAuMTUxLjEwMSIsIjAuMTUxLjIiXQ==
+        WyI2LjIyLjEiLCI2LjIxLjEiLCI2LjIwLjEiLCI2LjE5LjEiLCI2LjE4LjEi
+        LCI2LjE3LjEiLCI2LjE2LjIiLCI2LjE2LjEiLCI2LjE1LjEiLCI2LjE0LjIi
+        LCI2LjE0LjEiLCI2LjEzLjEiLCI2LjEyLjEiLCI2LjExLjEiLCI2LjEwLjEi
+        LCI2LjkuMSIsIjYuOC4xIiwiNi43LjEiLCI2LjYuMSIsIjYuNS4xIiwiNi40
+        LjIiLCI2LjQuMSIsIjYuMy4xIiwiNi4yLjEiLCI2LjEuMSIsIjUuMjQuMiIs
+        IjUuMjQuMSIsIjUuMjMuMSIsIjUuMjIuMyIsIjUuMjIuMiIsIjUuMjIuMSIs
+        IjUuMjEuMSIsIjUuMjAuMSIsIjUuMTkuMSIsIjUuMTguMSIsIjUuMTcuMSIs
+        IjUuMTYuMSIsIjUuMTUuMSIsIjUuMTQuMSIsIjUuMTMuMSIsIjUuMTIuMSIs
+        IjUuMTEuMSIsIjUuMTAuMSIsIjUuOS4xIiwiNS44LjEiLCI1LjcuMiIsIjUu
+        Ny4xIiwiNS42LjIiLCI1LjYuMSIsIjUuNS4zIiwiNS41LjIiLCI1LjUuMSIs
+        IjUuNC4xIiwiNS4zLjEiLCI1LjIuMiIsIjUuMi4xIiwiNS4xLjIiLCI1LjEu
+        MSIsIjQuMjEuNSIsIjQuMjEuNCIsIjQuMjEuMyIsIjQuMjEuMSIsIjQuMjAu
+        MiIsIjQuMjAuMSIsIjQuMTkuMyIsIjQuMTkuMiIsIjQuMTguMSIsIjQuMTcu
+        MSIsIjQuMTYuMSIsIjQuMTUuMSIsIjQuMTQuMiIsIjQuMTMuMSIsIjQuMTIu
+        MiIsIjQuMTIuMSIsIjQuMTEuMyIsIjQuMTAuNyIsIjQuMTAuMiIsIjQuOS4x
+        IiwiNC44LjMiLCI0LjguMiIsIjQuOC4xIiwiNC43LjE2IiwiNC43LjkiLCI0
+        LjcuOCIsIjQuNi4zIiwiNC41LjQiLCI0LjQuMyIsIjQuNC4yIiwiNC4zLjE4
+        IiwiNC4zLjEyIiwiNC4zLjEwIiwiNC4zLjQiLCI0LjMuMiIsIjQuMi42Iiwi
+        NC4yLjUiLCI0LjIuMSIsIjQuMS40MyIsIjQuMS40MSIsIjQuMS4xMyIsIjQu
+        MS45IiwiNC4xLjIiLCIzLjE1LjUiLCIzLjE1LjQiLCIzLjE1LjIiLCIzLjE0
+        LjQxIiwiMy4xNC4yMyIsIjMuMTQuMjIiLCIzLjE0LjIwIiwiMy4xNC4xOSIs
+        IjMuMTQuMTYiLCIzLjE0LjEzIiwiMy4xNC4xMiIsIjMuMTMuMjQiLCIzLjEz
+        LjgiLCIzLjEzLjYiLCIzLjEzLjEiLCIzLjEyLjM3IiwiMy4xMi4zNiIsIjMu
+        MTIuMzQiLCIzLjEyLjMzIiwiMy4xMi4yNiIsIjMuMTIuMjQiLCIzLjEyLjIi
+        LCIzLjExLjQiLCIzLjExLjIiLCIzLjEwLjYiLCIzLjEwLjMiLCIzLjEwLjIi
+        LCIzLjkuNyIsIjMuOS41IiwiMy45LjQiLCIzLjguNSIsIjMuOC4zIiwiMy44
+        LjEiLCIzLjcuOSIsIjMuNy4yIiwiMy43LjEiLCIzLjYuMTUiLCIzLjYuMTQi
+        LCIwLjE1NC4zIiwiMC4xNTQuMiIsIjAuMTUzLjIiLCIwLjE1Mi4xMTUiLCIw
+        LjE1Mi4xMDgiLCIwLjE1Mi4xMDciLCIwLjE1Mi41NSIsIjAuMTUxLjEwMSIs
+        IjAuMTUxLjIiXQ==
     http_version: 
-  recorded_at: Mon, 03 Oct 2016 22:54:31 GMT
-- request:
-    method: get
-    uri: https://global.api.pvp.net/api/lol/static-data/euw/v1.2/versions?api_key=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 403
-      message: Forbidden
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '66'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: "{\n\t\"status\": {\n\t\t\"message\": \"Forbidden\",\n\t\t\"status_code\":
-        403\n\t}\n}"
-    http_version: 
-  recorded_at: Fri, 14 Oct 2016 20:32:30 GMT
-- request:
-    method: get
-    uri: https://global.api.pvp.net/api/lol/static-data/euw//versions?api_key=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 403
-      message: Forbidden
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '66'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: "{\n\t\"status\": {\n\t\t\"message\": \"Forbidden\",\n\t\t\"status_code\":
-        403\n\t}\n}"
-    http_version: 
-  recorded_at: Sat, 05 Nov 2016 12:54:07 GMT
-- request:
-    method: get
-    uri: https://global.api.pvp.net/api/lol/static-data/euw//versions?api_key=RGAPI-6ff4492e-8b1f-480c-9dff-feb117d5a79b
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 403
-      message: Forbidden
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      X-Rate-Limit-Count:
-      - 1:10,5:600
-      Content-Length:
-      - '66'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: "{\n\t\"status\": {\n\t\t\"message\": \"Forbidden\",\n\t\t\"status_code\":
-        403\n\t}\n}"
-    http_version: 
-  recorded_at: Sat, 05 Nov 2016 13:17:10 GMT
+  recorded_at: Sun, 06 Nov 2016 18:52:12 GMT
 recorded_with: VCR 3.0.3

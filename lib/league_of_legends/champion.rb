@@ -3,19 +3,22 @@ module LeagueOfLegends
     RESOURCE = "champion"
 
     class << self
-      def all(champData = "all")
-        response = Request.get(RESOURCE, { champData: champData, dataById: true })
-        data = response["data"]
+      def all
+        response = Request.get_by_resource(RESOURCE, { champData: "info,lore,recommended", dataById: true })
         champions = []
 
-        data.values.each do |raw_champion|
-          champions << self.new(id: raw_champion["id"],
-                                title: raw_champion["title"],
-                                name: raw_champion["name"],
-                                key: raw_champion["key"],
-                                lore: raw_champion["lore"],
-                                info: raw_champion["info"],
-                                recommended: raw_champion["recommended"])
+        if response
+          data = response["data"]
+
+          data.values.each do |raw_champion|
+            champions << self.new(id: raw_champion["id"],
+                                  title: raw_champion["title"],
+                                  name: raw_champion["name"],
+                                  key: raw_champion["key"],
+                                  lore: raw_champion["lore"],
+                                  info: raw_champion["info"],
+                                  recommended: raw_champion["recommended"])
+          end
         end
 
         champions

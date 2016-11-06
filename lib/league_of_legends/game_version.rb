@@ -20,11 +20,13 @@ module LeagueOfLegends
 
     class << self
       def all
-        response = Request.get(RESOURCE)
+        response = Request.get_by_resource(RESOURCE)
         game_versions = []
 
-        response.each do |raw_game_version|
-          game_versions << self.new(number: raw_game_version)
+        if response
+          response.each do |raw_game_version|
+            game_versions << self.new(number: raw_game_version)
+          end
         end
 
         game_versions

@@ -3,11 +3,11 @@ require 'spec_helper'
 describe LeagueOfLegends::GameVersion, vcr: { cassette_name: "league_of_legends/game_version" } do
   describe '.all' do
     it 'returns all the game versions' do
-      version = described_class.new(number: "6.20.1")
+      version = described_class.new(number: "6.22.1")
 
       all_versions = described_class.all
 
-      expect(all_versions.count).to eq 146
+      expect(all_versions.count).to eq 148
 
       first_version = all_versions.first
 
@@ -17,7 +17,7 @@ describe LeagueOfLegends::GameVersion, vcr: { cassette_name: "league_of_legends/
 
   describe '.last' do
     it 'returns the last game version' do
-      version = described_class.new(number: "6.20.1")
+      version = described_class.new(number: "6.22.1")
 
       expect(described_class.last).to eq version
     end

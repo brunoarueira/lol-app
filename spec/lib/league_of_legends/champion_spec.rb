@@ -11,7 +11,7 @@ describe LeagueOfLegends::Champion, vcr: { cassette_name: "league_of_legends/cha
 
       all_champions = described_class.all
 
-      expect(all_champions.count).to eq 132
+      expect(all_champions.count).to eq 133
 
       first_champion = all_champions.first
 
@@ -69,7 +69,7 @@ describe LeagueOfLegends::Champion, vcr: { cassette_name: "league_of_legends/cha
                                      key: "Leona",
                                      info: { "attack" => 4, "defense" => 8, "magic" => 3, "difficulty" => 4 })
 
-      expect(champion.image).to eq "http://ddragon.leagueoflegends.com/cdn/6.20.1/img/champion/Leona.png"
+      expect(champion.image).to eq "http://ddragon.leagueoflegends.com/cdn/6.22.1/img/champion/Leona.png"
     end
   end
 

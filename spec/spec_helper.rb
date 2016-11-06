@@ -9,6 +9,7 @@ require_relative '../lol'
 
 require "support/capybara"
 require "support/vcr"
+require 'fakeredis'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
