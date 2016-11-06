@@ -10,10 +10,7 @@ gem 'erubis'
 gem 'rack-unreloader'
 gem 'redis'
 gem 'puma'
-
-group :development, :test do
-  gem 'dotenv'
-end
+gem 'dotenv'
 
 group :test do
   gem 'capybara', '2.7.0'
