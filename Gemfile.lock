@@ -20,7 +20,7 @@ GEM
     erubis (2.7.0)
     fakeredis (0.7.0)
       redis (>= 3.2, < 5.0)
-    hashdiff (0.3.0)
+    hashdiff (0.3.7)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     json (2.0.2)
@@ -58,7 +58,7 @@ GEM
     sass (3.4.22)
     tilt (2.0.5)
     vcr (3.0.3)
-    webmock (2.1.0)
+    webmock (3.4.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -84,7 +84,7 @@ DEPENDENCIES
   sass
   tilt
   vcr (= 3.0.3)
-  webmock (= 2.1.0)
+  webmock (= 3.4.2)
 
 BUNDLED WITH
    1.13.0.rc.1
