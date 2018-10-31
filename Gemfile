@@ -14,7 +14,7 @@ gem 'dotenv'
 
 group :test do
   gem 'capybara', '2.7.1'
-  gem 'capybara-webkit', '1.11.0'
+  gem 'capybara-webkit', '1.15.1'
   gem 'rspec'
   gem 'vcr', '3.0.3', require: false
   gem 'webmock', '3.4.2', require: false
