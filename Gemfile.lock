@@ -16,7 +16,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
-    dotenv (2.1.1)
+    dotenv (2.5.0)
     erubis (2.7.0)
     fakeredis (0.7.0)
       redis (>= 3.2, < 5.0)
