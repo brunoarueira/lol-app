@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    capybara (3.11.1)
+    capybara (3.12.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -81,7 +81,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara (= 3.11.1)
+  capybara (= 3.12.0)
   capybara-webkit (= 1.15.1)
   dotenv
   erubis
