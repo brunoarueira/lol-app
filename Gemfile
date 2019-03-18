@@ -2,7 +2,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'roda', '~> 3.17.0'
+gem 'roda', '~> 3.18.0'
 gem 'httparty'
 gem 'sass'
 gem 'tilt'
