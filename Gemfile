@@ -13,7 +13,7 @@ gem 'puma'
 gem 'dotenv'
 
 group :test do
-  gem 'capybara', '3.17.0'
+  gem 'capybara', '3.18.0'
   gem 'capybara-webkit', '1.15.1'
   gem 'rspec'
   gem 'vcr', '4.0.0', require: false
