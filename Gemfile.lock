@@ -69,7 +69,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     tilt (2.0.9)
-    vcr (4.0.0)
+    vcr (5.0.0)
     webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -95,7 +95,7 @@ DEPENDENCIES
   rspec
   sass
   tilt
-  vcr (= 4.0.0)
+  vcr (= 5.0.0)
   webmock (= 3.5.1)
 
 BUNDLED WITH

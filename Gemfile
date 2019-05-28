@@ -16,7 +16,7 @@ group :test do
   gem 'capybara', '3.21.0'
   gem 'capybara-webkit', '1.15.1'
   gem 'rspec'
-  gem 'vcr', '4.0.0', require: false
+  gem 'vcr', '5.0.0', require: false
   gem 'webmock', '3.5.1', require: false
   gem 'fakeredis', require: 'fakeredis/rspec'
 end
