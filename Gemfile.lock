@@ -22,7 +22,7 @@ GEM
     fakeredis (0.7.0)
       redis (>= 3.2, < 5.0)
     ffi (1.10.0)
-    hashdiff (0.3.7)
+    hashdiff (0.4.0)
     httparty (0.17.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -62,7 +62,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    safe_yaml (1.0.4)
+    safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -70,10 +70,10 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     tilt (2.0.9)
     vcr (5.0.0)
-    webmock (3.5.1)
+    webmock (3.6.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
-      hashdiff
+      hashdiff (>= 0.4.0, < 2.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -96,7 +96,7 @@ DEPENDENCIES
   sass
   tilt
   vcr (= 5.0.0)
-  webmock (= 3.5.1)
+  webmock (= 3.6.0)
 
 BUNDLED WITH
    1.13.0.rc.1
